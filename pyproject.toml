@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "algoritmos-combinatorios-tarea-2"
+version = "0.1.0"
+description = "Utilities and experiments for combinatorial algorithms coursework."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Andres Cruz Tello" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "ruff>=0.8.0",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
